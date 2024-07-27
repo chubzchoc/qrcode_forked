@@ -28,6 +28,16 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 29
 
+    compileOptions {
+        // Sets Java compatibility to Java 8
+       sourceCompatibility JavaVersion.VERSION_1_8
+       targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
